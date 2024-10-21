@@ -27,7 +27,7 @@ interface TaskContextType {
   deleteTask: (id: number) => void;
   filterTasks: (priority: string, status: string) => void;
   setSearch: (query: string) => void;
-  updateSortOrder: (order: "asc" | "desc") => void;
+  updateSortOrder: (order: "asc" | "desc" | "default") => void;
 }
 
 // Create the context
@@ -46,10 +46,13 @@ export const useTaskContext = () => {
 export const TaskProvider = ({ children }: { children: ReactNode }) => {
   const [tasks, setTasks] = useState<Task[]>(tasksData);
   const [filteredTasks, setFilteredTasks] = useState<Task[]>(tasksData);
+  const [originalTasks] = useState<Task[]>(tasksData); // Keep track of original tasks order
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [priorityFilter, setPriorityFilter] = useState<string>("");
   const [statusFilter, setStatusFilter] = useState<string>("");
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc" | "default">(
+    "default"
+  );
 
   // Function to update the filteredTasks based on the filters, search query, and sort order
   const updateFilteredTasks = () => {
@@ -89,7 +92,7 @@ export const TaskProvider = ({ children }: { children: ReactNode }) => {
   // Trigger filtering logic whenever tasks, filters, search query, or sort order change
   useEffect(() => {
     updateFilteredTasks();
-  }, [tasks, searchQuery, priorityFilter, statusFilter, sortOrder]); // Make sure all dependencies are in the useEffect
+  }, [tasks, searchQuery, priorityFilter, statusFilter, sortOrder]);
 
   const addTask = (task: Task) => {
     setTasks((prevTasks) => [...prevTasks, task]);
@@ -107,15 +110,18 @@ export const TaskProvider = ({ children }: { children: ReactNode }) => {
 
   // This function filters tasks based on priority and status.
   const filterTasks = (priority: string, status: string) => {
-    setPriorityFilter(priority); // This updates the priority filter
-    setStatusFilter(status); // This updates the status filter
-    // No need to manually update filtered tasks here, it will be handled by useEffect
+    setPriorityFilter(priority);
+    setStatusFilter(status);
   };
 
   // This function updates the sort order.
-  const updateSortOrder = (order: "asc" | "desc") => {
-    setSortOrder(order); // This updates the sort order
-    // Sorting is also automatically handled by the useEffect
+  const updateSortOrder = (order: "asc" | "desc" | "default") => {
+    if (order === "default") {
+      // Reset filteredTasks to the original task order (unsorted)
+      setFilteredTasks([...originalTasks]);
+    } else {
+      setSortOrder(order);
+    }
   };
 
   const setSearch = (query: string) => {
@@ -134,7 +140,7 @@ export const TaskProvider = ({ children }: { children: ReactNode }) => {
         deleteTask,
         filterTasks,
         setSearch,
-        updateSortOrder, // Use the renamed updateSortOrder function
+        updateSortOrder, // Handle sort order changes
       }}
     >
       {children}
