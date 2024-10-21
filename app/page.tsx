@@ -1,14 +1,6 @@
-import { AppProps } from "next/app";
-import { TaskProvider } from "@/src/context/TaskContext";
+// app/page.tsx
 import Main from "@/src/components/Main";
-import "bootstrap/dist/css/bootstrap.min.css";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <TaskProvider>
-      <Main {...pageProps} />
-    </TaskProvider>
-  );
+export default function Home() {
+  return <Main />;
 }
-
-export default MyApp;
