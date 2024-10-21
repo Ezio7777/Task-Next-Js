@@ -1,0 +1,152 @@
+.customSortButton {
+  background-color: white !important;
+  color: #941b0f !important;
+  border: 1px solid #941b0f !important;
+  text-align: center;
+  border-radius: 5px !important; /* Rounded corners */
+  display: flex; /* Align icon and text */
+  align-items: center; /* Center items vertically */
+  gap: 5px; /* Space between icon and text */
+  padding: 0.5rem 1rem; /* Optional padding for better appearance */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.sortContainer {
+  position: relative; /* Position dropdown relative to the button */
+}
+
+/* Styles for the dropdown */
+.dropdownMenu {
+  position: absolute;
+  margin-top: 5px;
+  top: 100%;
+  left: 0;
+  text-align: left;
+  background-color: white;
+  border: 1px solid #941b0f;
+  border-radius: 5px;
+  /* width: 100%; */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Styles for dropdown items */
+.dropdownItem {
+  text-align: left;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #941b0f;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.dropdownItem:hover {
+  background-color: #941b0f;
+  color: white;
+}
+
+/* CSS for mobile view */
+@media (max-width: 576px) {
+  .customSortButton {
+    justify-content: center; /* Center icon */
+  }
+
+  .customSortButton span {
+    display: none; /* Hide the text */
+  }
+}
+
+.customSortButton:hover {
+  background-color: rgb(248, 248, 248) !important;
+}
+
+/* filter  */
+
+/* Filter Button Styles */
+.filterButton {
+  background-color: white !important;
+  color: #941b0f !important;
+  border: 1px solid #941b0f !important;
+  text-align: center;
+  border-radius: 5px !important; /* Rounded corners */
+  display: flex; /* Align icon and text */
+  align-items: center; /* Center items vertically */
+  gap: 5px; /* Space between icon and text */
+  padding: 0.5rem 1rem; /* Optional padding for better appearance */
+  cursor: pointer; /* Change cursor to pointer */
+}
+@media (max-width: 576px) {
+  .filterButton {
+    justify-content: center; /* Center icon */
+  }
+
+  .filterButton span {
+    display: none; /* Hide the text */
+  }
+}
+.filterButton:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+/* Filter Container */
+.filterContainer {
+  position: relative;
+}
+
+/* Dropdown Styles */
+.filterDropdown {
+  position: absolute;
+  top: 100%;
+  margin-top: 5px;
+  /* left: 10px; */
+  right: 10px;
+  background-color: white;
+  border: 1px solid #941b0f;
+  border-radius: 5px;
+  width: calc(100% - 20px); /* Ensure it doesn't overflow the container */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  padding: 1rem;
+  white-space: nowrap; /* Prevent text truncation */
+  width: 100px;
+}
+
+.filterSection {
+  margin-bottom: 1rem;
+}
+
+.filterLabel {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.filterItem {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #941b0f;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+/* Apply Filter Button */
+.filterApply {
+  background-color: #941b0f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.filterApply:hover {
+  background-color: #750f0b;
+}

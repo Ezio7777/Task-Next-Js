@@ -1,0 +1,31 @@
+.TaskTableContainer {
+  margin-top: 50px;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.FormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ButtonContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.Title {
+  text-align: start;
+  flex-grow: 1; /* Allows Title to take all available free space */
+}
+
+.notFound {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
+  color: #941b0f;
+}

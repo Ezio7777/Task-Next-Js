@@ -1,0 +1,47 @@
+.searchBarContainer {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative; /* For absolute positioning of the button */
+}
+
+.searchInput {
+  transition: all 0.3s ease;
+  width: 100%; /* By default, the input is full width on larger screens */
+}
+
+.searchButton {
+  background-color: #941b0f !important; /* Set button background color */
+  color: white !important; /* Set icon color to white */
+  border: none; /* Remove button border */
+  padding: 0.375rem 0.75rem; /* Adjust padding for button */
+  position: absolute; /* Position the button absolutely */
+  right: 10px; /* Align it to the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for centering */
+  display: none; /* Hide button by default */
+  visibility: hidden;
+}
+
+@media (max-width: 576px) {
+  .searchButton {
+    display: block; /* Show the button on mobile */
+    visibility: visible;
+    margin-bottom: 20px;
+  }
+
+  .searchInput {
+    width: 0; /* Initially hidden */
+    margin-bottom: 20px;
+    padding: 0;
+    border: none;
+    visibility: hidden;
+  }
+
+  .expanded {
+    width: 100%; /* Expand to full width on mobile when clicked */
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #ced4da;
+    visibility: visible;
+  }
+}

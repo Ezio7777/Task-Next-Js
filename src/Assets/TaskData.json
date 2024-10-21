@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Complete Project Report",
+    "description": "Finalize the project report and submit it for review. Ensure all sections are complete, including diagrams and charts.",
+    "dueDate": "2024-09-12",
+    "priority": "Medium",
+    "status": "Completed"
+  },
+  {
+    "id": 2,
+    "name": "Team Meeting for Milestone Review",
+    "description": "Schedule a meeting with the development team to review progress on the current milestone and set targets for the next phase.",
+    "dueDate": "2027-09-15",
+    "priority": "High",
+    "status": "In Progress"
+  },
+  {
+    "id": 3,
+    "name": "Code Review and Testing",
+    "description": "Perform a thorough review of the recent code submissions and test for bugs or potential issues in the new feature implementations.",
+    "dueDate": "2024-09-17",
+    "priority": "Medium",
+    "status": "Completed"
+  },
+  {
+    "id": 4,
+    "name": "Client Presentation Preparation",
+    "description": "Prepare slides and talking points for the client presentation. Focus on project milestones and upcoming deliverables.",
+    "dueDate": "2024-09-18",
+    "priority": "Low",
+    "status": "Completed"
+  },
+  {
+    "id": 5,
+    "name": "Database Optimization",
+    "description": "Optimize the database queries and structure to improve performance, particularly on the reports generation page.",
+    "dueDate": "2024-09-20",
+    "priority": "Low",
+    "status": "Completed"
+  },
+  {
+    "id": 6,
+    "name": "UI/UX Feedback Session",
+    "description": "Conduct a feedback session with the design team to gather insights on the latest UI/UX updates and user interactions.",
+    "dueDate": "2024-10-25",
+    "priority": "High",
+    "status": "Completed"
+  },
+  {
+    "id": 7,
+    "name": "API Integration for Payment Gateway",
+    "description": "Integrate the payment gateway API with the application and ensure all transactions are processed securely and efficiently.",
+    "dueDate": "2024-09-27",
+    "priority": "High",
+    "status": "In Progress"
+  }
+]

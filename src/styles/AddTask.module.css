@@ -1,0 +1,100 @@
+/* Custom styles for SweetAlert2 modal */
+.customPopup {
+  background-color: #ffffff !important;
+  border-radius: 10px !important;
+  /* padding: 20px !important; */
+  font-family: "Proxima Nova", sans-serif;
+  text-align: left !important;
+  width: 100% !important;
+  max-width: 600px !important; /* Limit the modal width */
+  box-sizing: border-box !important;
+  overflow: hidden !important; /* Disable horizontal scrolling */
+  margin: 0 !important; /* Fix centering */
+  white-space: normal !important; /* Prevent content from sticking to the side */
+}
+
+.customInput {
+  margin: 0px !important;
+  border-radius: 5px !important;
+  border: 1px solid #dcdcdc !important;
+  padding: 10px !important;
+  font-size: 14px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 10px !important;
+  white-space: normal !important; /* Prevent text from causing overflow */
+}
+
+.customButtonContainer {
+  padding: inherit !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  justify-content: flex-start !important; /* Change to align buttons to the left */
+  margin-top: 15px !important; /* Add some space between inputs and buttons */
+  flex-wrap: nowrap;
+}
+
+.customConfirmButton,
+.customCancelButton {
+  width: 48% !important; /* Each button takes up about half the width */
+  padding: 10px 0 !important;
+  border-radius: 5px !important;
+  border: none !important;
+}
+
+.customConfirmButton {
+  background-color: #941b0f !important;
+  color: white !important;
+}
+
+.customCancelButton {
+  background-color: white !important;
+  color: #941b0f !important;
+  border: 1px solid #941b0f !important;
+}
+
+.customCancelButton:hover {
+  background-color: #fff9f8 !important;
+}
+
+.customLabel {
+  margin-top: 5px;
+  margin-left: 5px;
+  text-align: left !important;
+  font: normal normal medium 14px/18px Proxima Nova;
+  margin-bottom: 5px !important;
+  display: block !important; /* Ensure labels take up full width */
+}
+
+.addTaskButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #941b0f; /* Confirm button color */
+  color: white; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 0.5rem 1rem; /* Optional padding */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.addTaskButton:hover {
+  background-color: #87180e; /* Change background color on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .customButtonContainer {
+    padding: 10px !important;
+    flex-direction: row-reverse !important; /* Ensure buttons stay in a row in mobile view */
+    justify-content: space-between !important; /* Distribute buttons evenly */
+    gap: 10px !important; /* Add space between buttons */
+  }
+
+  .customConfirmButton,
+  .customCancelButton {
+    width: 48% !important; /* Keep buttons at 48% width to remain side-by-side */
+  }
+}

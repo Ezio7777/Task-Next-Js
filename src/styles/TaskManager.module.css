@@ -1,0 +1,309 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/proxima-nova.woff2") format("woff2"),
+    url("/fonts/proxima-nova.woff") format("woff");
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+/* Container for the task table */
+.task-table-container {
+  margin: 20px !important;
+  width: 100%;
+  /* background-color: #d7e9f7; */
+  /* border-radius: 50px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Full width table with some padding */
+.taskTable {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 500;
+  width: 100%;
+  border-collapse: separate; /* Change to separate */
+  border-spacing: 0; /* Ensure there's no spacing between cells */
+  text-align: left;
+  border: 1px solid #941b0f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Styling table headers */
+.taskTable th {
+  /* background-color: #bbdefb; */
+  padding: 15px;
+  text-align: left;
+  font: normal normal normal 14px/18px Proxima Nova;
+  font-size: 14px;
+  color: #941b0f;
+  opacity: 1;
+  border-bottom: 1px solid #941b0f;
+  background-color: #fff9f8;
+}
+
+.taskTable td {
+  font: normal normal medium 16px/21px Proxima Nova;
+  padding: 15px;
+  font-size: 14px;
+  color: #333;
+  /* border-bottom: 1px solid #941b0f; */
+}
+
+.taskTable tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.taskTable tr:nth-child(even) {
+  background-color: #fff9f8;
+}
+
+/* Action buttons inside the table (edit, delete) */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Search, Add, Sort, and Filter buttons */
+.header-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header-controls button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.header-controls button:hover {
+  background-color: #1565c0;
+}
+
+.header-controls input[type="search"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #90caf9;
+  width: 250px;
+}
+
+/* Status styles */
+/* Base class for all statuses */
+.status {
+  padding: 8px 12px;
+  width: 83px !important;
+  height: 24px;
+  background: #03a229 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  font-weight: normal;
+  opacity: 1;
+  color: white;
+}
+
+/* Status-specific styles */
+.status.completed {
+  background-color: #03a229; /* Green for Completed */
+}
+
+.status.in-progress {
+  background-color: #f5d20e; /* Yellow for In Progress */
+}
+
+.status.pending {
+  background-color: #f00; /* Example for Pending */
+}
+
+.status.cancelled {
+  background-color: #ff0000; /* Example for Cancelled */
+}
+
+/* Delete Bottons */
+
+.iconButton {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Adjust margin as needed */
+  cursor: pointer; /* Show pointer on hover */
+  color: inherit; /* Inherit text color from parent (for icon color) */
+  font-size: 1.2rem; /* Adjust the size of the icons if necessary */
+}
+
+.iconButton:hover {
+  color: #941b0f; /* Optional: Change icon color on hover */
+}
+
+/* Custom styles for SweetAlert2 modal */
+
+/* Delete btn  */
+.customPopupDelete {
+  background-color: #ffffff !important; /* Modal background color */
+  border-radius: 10px !important; /* Rounded corners */
+  padding: 20px !important; /* Padding inside modal */
+  box-sizing: border-box !important; /* Include padding in width calculations */
+  max-width: 428px !important; /* Set the width of the popup */
+  width: 100% !important;
+}
+
+.customButtonContainerDelete {
+  display: flex !important;
+  flex-direction: row-reverse !important; /* Keep buttons in a row */
+  justify-content: space-between !important; /* Space between buttons */
+  width: 100% !important; /* Full width for the button container */
+  margin-top: 15px; /* Add some space above buttons */
+  flex-wrap: nowrap !important;
+}
+
+.customConfirmButton {
+  background-color: #941b0f !important; /* Confirm button color */
+  color: white !important; /* Text color */
+  width: 48% !important; /* Make button width slightly less than half */
+  border-radius: 5px !important; /* Rounded corners */
+}
+
+.customCancelButton {
+  background-color: white !important; /* Cancel button color */
+  color: #941b0f !important; /* Text color */
+  border: 1px solid #941b0f !important;
+  width: 48% !important; /* Make button width slightly less than half */
+  border-radius: 5px !important; /* Rounded corners */
+}
+.customOkButton {
+  background-color: #941b0f !important; /* Confirm button color */
+  color: white !important; /* Text color */
+  text-align: center;
+  border-radius: 5px !important; /* Rounded corners */
+}
+
+.customCancelButton:hover {
+  background-color: rgb(250, 250, 250) !important;
+}
+
+/* Edit Btn */
+
+/* Custom styles for SweetAlert2 modal */
+.customPopup {
+  background-color: #ffffff !important;
+  border-radius: 10px !important;
+  padding: 0px !important;
+  font-family: "Proxima Nova", sans-serif;
+  text-align: left !important;
+  width: 100% !important;
+  max-width: 600px !important; /* Limit the modal width */
+  box-sizing: border-box !important;
+  overflow: hidden !important; /* Disable horizontal scrolling */
+  margin: 0 !important; /* Fix centering */
+  white-space: normal !important; /* Prevent content from sticking to the side */
+}
+
+.customInput {
+  margin: 0px !important;
+  border-radius: 5px !important;
+  border: 1px solid #dcdcdc !important;
+  padding: 10px !important;
+  font-size: 14px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 10px !important;
+  white-space: normal !important; /* Prevent text from causing overflow */
+}
+
+.customButtonContainer {
+  padding: 10px;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  justify-content: flex-start !important; /* Change to align buttons to the left */
+  margin-top: 15px !important; /* Add some space between inputs and buttons */
+  flex-wrap: nowrap !important;
+}
+
+.customConfirmButton,
+.customCancelButton {
+  width: 48% !important; /* Each button takes up about half the width */
+  padding: 10px 0 !important;
+  border-radius: 5px !important;
+  border: none !important;
+}
+
+.customConfirmButton {
+  background-color: #941b0f !important;
+  color: white !important;
+}
+
+.customCancelButton {
+  background-color: white !important;
+  color: #941b0f !important;
+  border: 1px solid #941b0f !important;
+}
+
+.customCancelButton:hover {
+  background-color: #fff9f8 !important;
+}
+
+.customLabel {
+  margin-top: 5px;
+  margin-left: 5px;
+  text-align: left !important;
+  font: normal normal medium 14px/18px Proxima Nova;
+  margin-bottom: 5px !important;
+  display: block !important; /* Ensure labels take up full width */
+}
+
+/* Td section  */
+
+.statusColumn {
+  min-width: 130px !important;
+  width: auto !important;
+}
+.DueColumn {
+  min-width: 120px !important;
+  width: auto !important;
+}
+
+.searchBarContainer {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative; /* For absolute positioning of the button */
+}
+
+.searchInput {
+  transition: all 0.3s ease;
+  width: 100%; /* By default, the input is full width on larger screens */
+}
+
+.searchButton {
+  background-color: #941b0f !important; /* Set button background color */
+  color: white !important; /* Set icon color to white */
+  border: none; /* Remove button border */
+  padding: 0.375rem 0.75rem; /* Adjust padding for button */
+  position: absolute; /* Position the button absolutely */
+  right: 10px; /* Align it to the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for centering */
+  display: none; /* Hide button by default */
+}
+
+@media (max-width: 576px) {
+  .searchButton {
+    display: block; /* Show the button on mobile */
+  }
+
+  .searchInput {
+    width: 0; /* Initially hidden */
+    padding: 0;
+    border: none;
+    visibility: hidden;
+  }
+
+  .expanded {
+    width: 100%; /* Expand to full width on mobile when clicked */
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #ced4da;
+    visibility: visible;
+  }
+}
